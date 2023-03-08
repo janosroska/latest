@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": ["nx", "serve", "myapp", "--inspect"],
+            "outputCapture": "std",
+            "internalConsoleOptions": "openOnSessionStart",
+            "console": "internalConsole",
+            "env": {
+              "TS_NODE_IGNORE": "false",
+              "TS_NODE_PROJECT": "${workspaceFolder}/apps/ledger/tsconfig.json"
+            },
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\apps\\myapp\\src\\main.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}
